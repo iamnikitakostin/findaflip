@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router-dom";
+
 function Footer() {
+  const navigate = useNavigate();
   return (
     <footer className="bg-blue-900 text-white py-8">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
@@ -11,14 +14,14 @@ function Footer() {
 
         <div className="flex justify-center space-x-6">
 
-          <a
-            href="/terms"
+          <button
+            onClick={() => navigate('/terms')}
             className="text-gray-400 hover:text-white transition-colors duration-300"
           >
             Terms of Service
-          </a>
+          </button>
           <a
-            href="/contact"
+            onClick={() => navigate('/contact')}
             className="text-gray-400 hover:text-white transition-colors duration-300"
           >
             Contact Us
